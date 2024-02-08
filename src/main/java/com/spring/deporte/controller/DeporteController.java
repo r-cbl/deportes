@@ -33,7 +33,7 @@ public class DeporteController {
                             .body(DeporteMapper.getInstances(this.deporteService.todosLosDeportes()));
     }
 
-    @GetMapping("/findSport/{nombre}")
+    @GetMapping("/findSport/{nombre}") //todo: cambiar a query params
     public ResponseEntity<DeporteDTO> deportesPorNombre(@PathVariable String nombre){
         Optional<Deporte> deporte = this.deporteService.buscarPorNombre(nombre);
         DeporteDTO response =  (deporte.isPresent()) ? DeporteMapper.getInstance(deporte.get()) :  DeporteDTO.builder().build();

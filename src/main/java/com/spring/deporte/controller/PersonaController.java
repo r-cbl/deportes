@@ -23,7 +23,7 @@ public class PersonaController {
     PersonaService personaService;
 
     @GetMapping("/findSportPersons")
-    public ResponseEntity<List <PersonaDTO> > todosDeportistas(@PathVariable String nombre){
+    public ResponseEntity<List <PersonaDTO> > todosDeportistas(){
 
         return ResponseEntity.ok()
                              .body(PersonaMapper.getInstances(this.personaService.deportistas()));

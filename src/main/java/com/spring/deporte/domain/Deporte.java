@@ -16,7 +16,7 @@ public class Deporte {
     String nivel;
     List<Persona> personas = new ArrayList<>();
 
-    public Deporte (String nivel, String nombre){
+    public Deporte (String nombre, String nivel){
         this.nivel = nivel;
         this.nombre = nombre;
     }
